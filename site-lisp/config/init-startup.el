@@ -1,81 +1,50 @@
-(defvar better-gc-cons-threshold (* 16 1024 1024) ; 16mb
-  "The default value to use for `gc-cons-threshold'.
-If you experience freezing, decrease this. If you experience stuttering, increase this.")
+;; Speed up startup
+(defvar damacs-gc-cons-threshold (if (display-graphic-p) 64000000 1600000)
+  "The default value to use for `gc-cons-threshold'. If you experience freezing,
+decrease this. If you experience stuttering, increase this.")
 
-(setq gc-cons-threshold most-positive-fixnum
-      gc-cons-percentage 0.6)
+(defvar damacs-gc-cons-upper-limit (if (display-graphic-p) 512000000 128000000)
+  "The temporary value for `gc-cons-threshold' to defer it.")
 
-(defvar startup/file-name-handler-alist file-name-handler-alist)
+(defvar damacs-gc-timer (run-with-idle-timer 10 t #'garbage-collect)
+  "Run garbarge collection when idle 10s.")
+
+(defvar default-file-name-handler-alist file-name-handler-alist)
+
 (setq file-name-handler-alist nil)
-
-(defun startup/revert-file-name-handler-alist ()
-  (setq file-name-handler-alist startup/file-name-handler-alist))
-
-(defun startup/reset-gc ()
-  (setq gc-cons-threshold better-gc-cons-threshold
-	gc-cons-percentage 0.1))
-
-(add-hook 'emacs-startup-hook 'startup/revert-file-name-handler-alist)
-(add-hook 'emacs-startup-hook 'startup/reset-gc)
-
-(defun gc-minibuffer-setup-hook ()
-  (setq gc-cons-threshold (* better-gc-cons-threshold 2)))
-
-(defun gc-minibuffer-exit-hook ()
-  (garbage-collect)
-  (setq gc-cons-threshold better-gc-cons-threshold))
-
-(add-hook 'minibuffer-setup-hook #'gc-minibuffer-setup-hook)
-(add-hook 'minibuffer-exit-hook #'gc-minibuffer-exit-hook)
-
-
+(setq gc-cons-threshold damacs-gc-cons-upper-limit
+      gc-cons-percentage 0.6)
 (add-hook 'emacs-startup-hook
           (lambda ()
+            "Restore defalut values after startup."
+            (setq file-name-handler-alist default-file-name-handler-alist)
+            (setq gc-cons-threshold damacs-gc-cons-threshold
+                  gc-cons-percentage 0.1)
+
+            ;; GC automatically while unfocusing the frame
+            ;; `focus-out-hook' is obsolete since 27.1
             (if (boundp 'after-focus-change-function)
                 (add-function :after after-focus-change-function
-                              (lambda ()
-                                (unless (frame-focus-state)
-                                  (garbage-collect))))
-(add-hook 'after-focus-change-function 'garbage-collect))))
+                  (lambda ()
+                    (unless (frame-focus-state)
+                      (garbage-collect))))
+              (add-hook 'focus-out-hook 'garbage-collect))
 
+            ;; Avoid GCs while using `ivy'/`counsel'/`swiper' and `helm', etc.
+            ;; @see http://bling.github.io/blog/2016/01/18/why-are-you-changing-gc-cons-threshold/
+            (defun my-minibuffer-setup-hook ()
+              (setq gc-cons-threshold damacs-gc-cons-upper-limit))
 
+            (defun my-minibuffer-exit-hook ()
+              (setq gc-cons-threshold damacs-gc-cons-threshold))
 
-(add-hook 'emacs-startup-hook
-          (lambda ()
-            (message "Emacs ready in %s with %d garbage collections."
-                     (format "%.2f seconds"
-                             (float-time
-                              (time-subtract after-init-time before-init-time)))
-                     gcs-done)))
+            (add-hook 'minibuffer-setup-hook #'my-minibuffer-setup-hook)
+            (add-hook 'minibuffer-exit-hook #'my-minibuffer-exit-hook)))
 
-(setq
- ;; 不要缩放frame.
- frame-inhibit-implied-resize t
- ;; 默认用最简单的模式
- initial-major-mode 'fundamental-mode
- ;; 不要自动启用package
- package-enable-at-startup nil
- package--init-file-ensured t)
-
-;; 禁用工具栏
-(tool-bar-mode -1)
-;; 禁用菜单栏
-(menu-bar-mode -1)
-;; 禁用滚动条
-(scroll-bar-mode -1)
-
-;; Restore emacs session.
-(setq initial-buffer-choice t)
-(run-with-timer 1 nil #'(lambda () (bury-buffer)))
-
-;; 增加长行处理性能
-(setq bidi-inhibit-bpa t)
-(setq-default bidi-paragraph-direction 'left-to-right)
-
-;; 增加IO性能
-(setq process-adaptive-read-buffering nil)
-(setq read-process-output-max (* 1024 1024))
-
+;; 定义一些启动目录，方便下次迁移修改
+(defvar damacs-root-dir (file-truename "~/damacs/site-lisp"))
+(defvar damacs-config-dir (concat damacs-root-dir "/config"))
+(defvar damacs-extension-dir (concat damacs-root-dir "/extensions"))
 
 ;; --------------------
 (provide 'init-startup)
