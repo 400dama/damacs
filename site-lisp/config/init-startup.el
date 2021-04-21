@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 ;; Speed up startup
 (defvar damacs-gc-cons-threshold (if (display-graphic-p) 64000000 1600000)
   "The default value to use for `gc-cons-threshold'. If you experience freezing,
@@ -45,6 +47,7 @@ decrease this. If you experience stuttering, increase this.")
 (defvar damacs-root-dir (file-truename "~/damacs/site-lisp"))
 (defvar damacs-config-dir (concat damacs-root-dir "/config"))
 (defvar damacs-extension-dir (concat damacs-root-dir "/extensions"))
+(defvar damacs-module-dir (concat damacs-root-dir "/modules"))
 
 ;; --------------------
 (provide 'init-startup)
