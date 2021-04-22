@@ -6,6 +6,7 @@
 (require 'init-ui)
 (require 'init-auto-save)
 (require 'init-which-key)
+(require 'init-treemacs)
 
 ;; ------------
 (provide 'init)

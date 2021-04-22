@@ -2,6 +2,8 @@
 (setq package-list '(
 		     ;; winum
 		     shrink-path
+		     ht
+		     pfuture
 		     ))
 
 (dolist (package package-list)
