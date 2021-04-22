@@ -1,6 +1,7 @@
 ;;; -*- lexical-binding: t -*-
 (setq package-list '(
-		     winum
+		     ;; winum
+		     shrink-path
 		     ))
 
 (dolist (package package-list)

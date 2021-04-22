@@ -1,5 +1,6 @@
 ;;; -*- lexical-binding: t -*-
 
+
 (setq winum-keymap
     (let ((map (make-sparse-keymap)))
       (define-key map (kbd "C-`") 'winum-select-window-by-number)
@@ -16,7 +17,6 @@
       map))
 
 (require 'winum)
-
 (winum-mode)
 
 ;; -------------------------
