@@ -7,6 +7,7 @@
 (require 'init-auto-save)
 (require 'init-which-key)
 (require 'init-treemacs)
+(require 'init-eaf)
 
 ;; ------------
 (provide 'init)

@@ -25,3 +25,15 @@
 [submodule "site-lisp/extensions/projectile"]
 	path = site-lisp/extensions/projectile
 	url = https://github.com/bbatsov/projectile.git
+[submodule "site-lisp/extensions/emacs-application-framework"]
+	path = site-lisp/extensions/emacs-application-framework
+	url = https://github.com/manateelazycat/emacs-application-framework.git
+[submodule "site-lisp/extensions/emacs-ctable"]
+	path = site-lisp/extensions/emacs-ctable
+	url = https://github.com/kiwanami/emacs-ctable.git
+[submodule "site-lisp/extensions/emacs-deferred"]
+	path = site-lisp/extensions/emacs-deferred
+	url = https://github.com/kiwanami/emacs-deferred.git
+[submodule "site-lisp/extensions/emacs-epc"]
+	path = site-lisp/extensions/emacs-epc
+	url = https://github.com/kiwanami/emacs-epc.git
