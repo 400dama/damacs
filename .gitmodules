@@ -28,6 +28,7 @@
 [submodule "site-lisp/extensions/emacs-application-framework"]
 	path = site-lisp/extensions/emacs-application-framework
 	url = https://github.com/manateelazycat/emacs-application-framework.git
+	ignore = dirty
 [submodule "site-lisp/extensions/emacs-ctable"]
 	path = site-lisp/extensions/emacs-ctable
 	url = https://github.com/kiwanami/emacs-ctable.git
