@@ -1,7 +1,7 @@
 ;;; -*- lexical-binding: t -*-
 (require 'nyan-mode)
 (nyan-mode)
-(setq nyan-wavy-trail t)
+;; (setq nyan-wavy-trail t)
 (setq nyan-animation-frame-interval 0.5)
 
 (define-minor-mode mood-line-mode
