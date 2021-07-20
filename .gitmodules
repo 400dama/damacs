@@ -41,3 +41,6 @@
 [submodule "site-lisp/extensions/pyim"]
 	path = site-lisp/extensions/pyim
 	url = https://github.com/tumashu/pyim.git
+[submodule "site-lisp/extensions/meow"]
+	path = site-lisp/extensions/meow
+	url = https://github.com/DogLooksGood/meow.git
