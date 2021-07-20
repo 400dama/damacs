@@ -24,7 +24,7 @@
 (setq eaf-browser-default-search-engine "duckduckgo")
 
 ;; Default Zoom
-(eaf-setq eaf-browser-default-zoom "1.25")
+(eaf-setq eaf-browser-default-zoom "0.85")
 
 ;; ------------
 (provide 'init-eaf)
