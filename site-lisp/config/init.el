@@ -8,6 +8,7 @@
 (require 'init-which-key)
 (require 'init-treemacs)
 (require 'init-eaf)
+(require 'init-meow)
 
 ;; ------------
 (provide 'init)
