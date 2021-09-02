@@ -102,5 +102,11 @@
 (setq doom-modeline-before-update-env-hook nil)
 (setq doom-modeline-after-update-env-hook nil)
 
+(display-time-mode 1)
+(display-battery-mode 1)
+(setq display-time-24hr-format t)
+(setq display-time-format "%H:%M")
+(setq display-time-default-load-average nil)
+
 ;; -------------------------
 (provide 'init-doom-modeline)

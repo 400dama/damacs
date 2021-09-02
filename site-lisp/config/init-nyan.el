@@ -33,13 +33,10 @@
                              (:eval (mood-line-segment-anzu))
 			     (:eval (mood-line-segment-multiple-cursors))
 			     (:eval (mood-line-segment-position))
-
 			     (:eval (list (nyan-create)))
 			     " "
 			     )
 			   )
-
-
                           ;; Right
                           (format-mode-line
                            '((:eval (mood-line-segment-eol))

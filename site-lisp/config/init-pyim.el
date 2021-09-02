@@ -1,6 +1,9 @@
 ;;; -*- lexical-binding: t -*-
-;; (require 'pyim)
-;; (setq default-input-method "pyim")
+(require 'pyim)
+
+(setq default-input-method "pyim")
+
+
 
 
 

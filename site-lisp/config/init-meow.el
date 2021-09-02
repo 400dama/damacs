@@ -95,4 +95,4 @@
   (meow-setup-indicator))
 
 ;; ------------
-(provide 'init)
+(provide 'init-meow)

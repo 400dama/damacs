@@ -44,3 +44,27 @@
 [submodule "site-lisp/extensions/meow"]
 	path = site-lisp/extensions/meow
 	url = https://github.com/DogLooksGood/meow.git
+[submodule "site-lisp/extensions/sudo-edit"]
+	path = site-lisp/extensions/sudo-edit
+	url = https://github.com/nflath/sudo-edit.git
+[submodule "site-lisp/extensions/ace-window"]
+	path = site-lisp/extensions/ace-window
+	url = https://github.com/abo-abo/ace-window.git
+[submodule "site-lisp/extensions/avy"]
+	path = site-lisp/extensions/avy
+	url = https://github.com/abo-abo/avy.git
+[submodule "site-lisp/extensions/magit"]
+	path = site-lisp/extensions/magit
+	url = https://github.com/magit/magit.git
+[submodule "site-lisp/extensions/smartparens"]
+	path = site-lisp/extensions/smartparens
+	url = https://github.com/Fuco1/smartparens.git
+[submodule "site-lisp/extensions/highlight-indent-guides"]
+	path = site-lisp/extensions/highlight-indent-guides
+	url = https://github.com/DarthFennec/highlight-indent-guides.git
+[submodule "site-lisp/extensions/emacs-format-all-the-code"]
+	path = site-lisp/extensions/emacs-format-all-the-code
+	url = https://github.com/lassik/emacs-format-all-the-code.git
+[submodule "site-lisp/extensions/awesome-pair"]
+	path = site-lisp/extensions/awesome-pair
+	url = https://github.com/manateelazycat/awesome-pair.git
