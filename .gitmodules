@@ -68,3 +68,6 @@
 [submodule "site-lisp/extensions/awesome-pair"]
 	path = site-lisp/extensions/awesome-pair
 	url = https://github.com/manateelazycat/awesome-pair.git
+[submodule "site-lisp/extensions/company-posframe"]
+	path = site-lisp/extensions/company-posframe
+	url = https://github.com/tumashu/company-posframe.git
