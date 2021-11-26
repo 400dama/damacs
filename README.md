@@ -3,7 +3,7 @@
 ```
 git clone --recurse-submodules -j8 git@github.com:400dama/damacs.git
 
-git submodule pull --recursive --remote
+git submodule update --recursive --remote
 git submodule foreach git reset --hard
 git submodule foreach git checkout master
 
