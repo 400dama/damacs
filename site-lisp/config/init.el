@@ -1,7 +1,6 @@
 ;;; -*- lexical-binding: t -*-
 (require 'init-startup)
 (require 'init-package)
-(require 'init-package-list)
 (require 'init-basic)
 (require 'init-ui)
 (require 'init-auto-save)

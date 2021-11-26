@@ -12,10 +12,10 @@
   (setq package-enable-at-startup nil)
   (package-initialize))
 
-
-
 (unless package-archive-contents
   (package-refresh-contents))
+
+(require 'init-package-list)
 
 ;; --------------------
 (provide 'init-package)
