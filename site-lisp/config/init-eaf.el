@@ -2,13 +2,13 @@
 (require 'eaf)
 
 ;; keybind
-(eaf-bind-key scroll_up "M-j" eaf-browser-keybinding)
-(eaf-bind-key scroll_down "M-k" eaf-browser-keybinding)
-(eaf-bind-key scroll_up_page "M-n" eaf-browser-keybinding)
-(eaf-bind-key scroll_down_page "M-p" eaf-browser-keybinding)
-(eaf-bind-key open_link "M-h" eaf-browser-keybinding)
-(eaf-bind-key open_link_new_buffer "M-H" eaf-browser-keybinding)
-(eaf-bind-key refresh_page "M-r" eaf-browser-keybinding)
+;; (eaf-bind-key scroll_up "M-j" eaf-browser-keybinding)
+;; (eaf-bind-key scroll_down "M-k" eaf-browser-keybinding)
+;; (eaf-bind-key scroll_up_page "M-n" eaf-browser-keybinding)
+;; (eaf-bind-key scroll_down_page "M-p" eaf-browser-keybinding)
+;; (eaf-bind-key open_link "M-h" eaf-browser-keybinding)
+;; (eaf-bind-key open_link_new_buffer "M-H" eaf-browser-keybinding)
+;; (eaf-bind-key refresh_page "M-r" eaf-browser-keybinding)
 
 ;; Make EAF the Default Browser in Emacs
 (setq browse-url-browser-function 'eaf-open-browser)

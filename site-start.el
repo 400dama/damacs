@@ -3,6 +3,6 @@
   (let ((default-directory (file-name-as-directory dir)))
     (add-to-list 'load-path dir)
     (normal-top-level-add-subdirs-to-load-path)))
-(add-subdirs-to-load-path "/home/parzival/emacs28/share/emacs/damacs/")
+(add-subdirs-to-load-path "/usr/share/emacs/damacs/")
 
 (require 'init)

@@ -79,5 +79,8 @@ FACE defaults to inheriting from default and highlight."
 (setq hscroll-step 1)
 (setq hscroll-margin 1)
 
+;; Fullscreen
+(toggle-frame-fullscreen)
+
 ;; ---------------
 (provide 'init-ui)
