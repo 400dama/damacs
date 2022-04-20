@@ -2,20 +2,40 @@
 (require 'doom-modeline)
 (doom-modeline-mode 1)
 
+
+;; If non-nil, cause imenu to see `doom-modeline' declarations.
+;; This is done by adjusting `lisp-imenu-generic-expression' to
+;; include support for finding `doom-modeline-def-*' forms.
+;; Must be set before loading doom-modeline.
+(setq doom-modeline-support-imenu t)
+
+;; How tall the mode-line should be. It's only respected in GUI.
 ;; If the actual char height is larger, it respects the actual height.
 (setq doom-modeline-height 26)
 
 ;; How wide the mode-line bar should be. It's only respected in GUI.
-(setq doom-modeline-bar-width 3)
+(setq doom-modeline-bar-width 4)
+
+;; Whether to use hud instead of default bar. It's only respected in GUI.
+(setq doom-modeline-hud nil)
+
+;; The limit of the window width.
+;; If `window-width' is smaller than the limit, some information won't be
+;; displayed. It can be an integer or a float number. `nil' means no limit."
+(setq doom-modeline-window-width-limit 0.25)
 
 ;; How to detect the project root.
-;; The default priority of detection is `ffip' > `projectile' > `project'.
 ;; nil means to use `default-directory'.
 ;; The project management packages have some issues on detecting project root.
 ;; e.g. `projectile' doesn't handle symlink folders well, while `project' is unable
 ;; to hanle sub-projects.
 ;; You can specify one if you encounter the issue.
-(setq doom-modeline-project-detection 'project)
+(setq doom-modeline-project-detection 'auto)
+;; built-in `project' on 26+
+;; (setq doom-modeline-project-detection 'project)
+;; or `find-in-project' if it's installed
+;; (setq doom-modeline-project-detection 'ffip)
+
 
 ;; Determines the style used by `doom-modeline-buffer-file-name'.
 ;;
@@ -36,7 +56,7 @@
 ;; If you are experiencing the laggy issue, especially while editing remote files
 ;; with tramp, please try `file-name' style.
 ;; Please refer to https://github.com/bbatsov/projectile/issues/657.
-(setq doom-modeline-buffer-file-name-style 'auto)
+(setq doom-modeline-buffer-file-name-style 'truncate-upto-root)
 
 ;; Whether display icons in the mode-line.
 ;; While using the server mode in GUI, should set the value explicitly.
@@ -58,6 +78,9 @@
 
 ;; Whether to use unicode as a fallback (instead of ASCII) when not using icons.
 (setq doom-modeline-unicode-fallback nil)
+
+;; Whether display the buffer name.
+(setq doom-modeline-buffer-name t)
 
 ;; Whether display the minor modes in the mode-line.
 (setq doom-modeline-minor-modes nil)
@@ -98,6 +121,60 @@
 ;; If non nil the perspective name is displayed alongside a folder icon.
 (setq doom-modeline-persp-icon t)
 
+;; Whether display the `lsp' state. Non-nil to display in the mode-line.
+(setq doom-modeline-lsp t)
+
+;; Whether display the GitHub notifications. It requires `ghub' package.
+(setq doom-modeline-github nil)
+
+;; The interval of checking GitHub.
+(setq doom-modeline-github-interval (* 30 60))
+
+;; Whether display the modal state icon.
+;; Including `evil', `overwrite', `god', `ryo' and `xah-fly-keys', etc.
+(setq doom-modeline-modal-icon t)
+
+;; Whether display the mu4e notifications. It requires `mu4e-alert' package.
+(setq doom-modeline-mu4e nil)
+;; also enable the start of mu4e-alert
+;; (mu4e-alert-enable-mode-line-display)
+
+;; Whether display the gnus notifications.
+;; (setq doom-modeline-gnus t)
+
+;; Whether gnus should automatically be updated and how often (set to 0 or smaller than 0 to disable)
+;; (setq doom-modeline-gnus-timer 2)
+
+;; Wheter groups should be excludede when gnus automatically being updated.
+;; (setq doom-modeline-gnus-excluded-groups '("dummy.group"))
+
+;; Whether display the IRC notifications. It requires `circe' or `erc' package.
+;; (setq doom-modeline-irc t)
+
+;; Function to stylize the irc buffer names.
+;; (setq doom-modeline-irc-stylize 'identity)
+
+;; Whether display the environment version.
+(setq doom-modeline-env-version t)
+;; Or for individual languages
+(setq doom-modeline-env-enable-python t)
+(setq doom-modeline-env-enable-ruby t)
+(setq doom-modeline-env-enable-perl t)
+(setq doom-modeline-env-enable-go t)
+(setq doom-modeline-env-enable-elixir t)
+(setq doom-modeline-env-enable-rust t)
+
+;; Change the executables to use for the language version string
+(setq doom-modeline-env-python-executable "python") ; or `python-shell-interpreter'
+(setq doom-modeline-env-ruby-executable "ruby")
+(setq doom-modeline-env-perl-executable "perl")
+(setq doom-modeline-env-go-executable "go")
+(setq doom-modeline-env-elixir-executable "iex")
+(setq doom-modeline-env-rust-executable "rustc")
+
+;; What to display as the version while a new one is being loaded
+(setq doom-modeline-env-load-string "...")
+
 ;; Hooks that run before/after the modeline version string is updated
 (setq doom-modeline-before-update-env-hook nil)
 (setq doom-modeline-after-update-env-hook nil)
@@ -107,6 +184,7 @@
 (setq display-time-24hr-format t)
 (setq display-time-format "%H:%M")
 (setq display-time-default-load-average nil)
+
 
 ;; -------------------------
 (provide 'init-doom-modeline)

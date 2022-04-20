@@ -4,6 +4,12 @@
 (setq user-full-name "400dama")
 (setq user-mail-address "gotenks9002@gmail.com")
 
+;; User Path
+(defvar damacs-root-dir (file-truename "~/damacs/site-lisp"))
+(defvar damacs-config-dir (concat damacs-root-dir "/config"))
+(defvar damacs-extension-dir (concat damacs-root-dir "/extensions"))
+(defvar damacs-module-dir (concat damacs-root-dir "/modules"))
+
 ;; Consts
 (defconst *sys/win32*
   (eq system-type 'windows-nt)
@@ -55,13 +61,16 @@
 
 ;; Unbind unneeded keys
 (global-set-key (kbd "C-z") nil)
+(global-set-key (kbd "C-'") nil)
 
 ;; EditConfig
 (defun edit-configs ()
   "Opens the init.ef file."
   (interactive)
   (find-file "~/damacs/site-lisp/config/init.el"))
-(global-set-key (kbd "C-z e") #'edit-configs)
+(global-set-key (kbd "C-' e") #'edit-configs)
+;; Restart Emacs
+(global-set-key (kbd "C-' r") #'restart-emacs)
 ;; ReadLines
 (defun read-lines (file-path)
   "Return a list of lines of a file at FILE-PATH."

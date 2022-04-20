@@ -46,13 +46,6 @@ decrease this. If you experience stuttering, increase this.")
 ;; Improve the performance of rendering long lines.
 (setq-default bidi-display-reordering nil)
 
-;; 定义一些启动目录，方便下次迁移修改
-(defvar damacs-root-dir (file-truename "~/damacs/site-lisp"))
-(defvar damacs-config-dir (concat damacs-root-dir "/config"))
-(defvar damacs-extension-dir (concat damacs-root-dir "/extensions"))
-(defvar damacs-module-dir (concat damacs-root-dir "/modules"))
-
-(setq ring-bell-function 'ignore)
 
 ;; Package cl is deprecated
 (require 'cl-lib)

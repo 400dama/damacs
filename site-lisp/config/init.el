@@ -1,10 +1,10 @@
 ;;; -*- lexical-binding: t -*-
 (require 'init-startup)
-(require 'init-package)
 (require 'init-basic)
+(require 'init-package)
 (require 'init-ui)
 ;; (require 'init-auto-save)
-;; (require 'init-which-key)
+(require 'init-which-key)
 ;; (require 'init-treemacs)
 ;; (require 'init-eaf)
 ;; (require 'init-meow)

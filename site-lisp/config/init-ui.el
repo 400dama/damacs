@@ -9,7 +9,7 @@
 
 ;; (set-face-attribute 'default nil :height 110)
 
-;; PreSym
+;; Prettify Symbols
 (global-prettify-symbols-mode 1)
 (defun add-pretty-lambda ()
   "Make some word or string show as pretty Unicode symbols.  See https://unicodelookup.com for more."
@@ -24,13 +24,13 @@
 (add-hook 'org-mode-hook 'add-pretty-lambda)
 
 ;; BetterMiniBuffer
-(defun abort-minibuffer-using-mouse ()
-  "Abort the minibuffer when using the mouse."
-  (when (and (>= (recursion-depth) 1) (active-minibuffer-window))
-    (abort-recursive-edit)))
-(add-hook 'mouse-leave-buffer-hook 'abort-minibuffer-using-mouse)
+;; (defun abort-minibuffer-using-mouse ()
+;;   "Abort the minibuffer when using the mouse."
+;;   (when (and (>= (recursion-depth) 1) (active-minibuffer-window))
+;;     (abort-recursive-edit)))
+;; (add-hook 'mouse-leave-buffer-hook 'abort-minibuffer-using-mouse)
 ;; keep the point out of the minibuffer
-(setq-default minibuffer-prompt-properties '(read-only t point-entered minibuffer-avoid-prompt face minibuffer-prompt))
+;; (setq-default minibuffer-prompt-properties '(read-only t point-entered minibuffer-avoid-prompt face minibuffer-prompt))
 
 ;; DisplayLineOverlay
 (defun display-line-overlay+ (pos str &optional face)
@@ -62,7 +62,7 @@ FACE defaults to inheriting from default and highlight."
 (require 'init-fonts)
 (require 'init-doom-themes)
 (require 'init-doom-modeline)
-(require 'init-nyan)
+;; (require 'init-nyan)
 
 ;; SmoothScroll
 ;; Vertical Scroll
@@ -80,7 +80,10 @@ FACE defaults to inheriting from default and highlight."
 (setq hscroll-margin 1)
 
 ;; Fullscreen
-(toggle-frame-fullscreen)
+;; (toggle-frame-fullscreen)
+
+;; Startup
+(require 'init-dashboard)
 
 ;; ---------------
 (provide 'init-ui)
