@@ -77,3 +77,9 @@
 [submodule "site-lisp/extensions/page-break-lines"]
 	path = site-lisp/extensions/page-break-lines
 	url = https://github.com/purcell/page-break-lines.git
+[submodule "site-lisp/extensions/fancy-battery"]
+	path = site-lisp/extensions/fancy-battery
+	url = https://github.com/emacsorphanage/fancy-battery.git
+[submodule "site-lisp/extensions/dirvish"]
+	path = site-lisp/extensions/dirvish
+	url = https://github.com/alexluigit/dirvish.git
