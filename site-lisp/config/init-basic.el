@@ -117,5 +117,8 @@
 ;; (setq use-short-answers t)
 ;; (define-key y-or-n-p-map [return] 'act)
 
+;; - Dirvish
+;; (require 'init-dirvish)
+
 ;; ------------------
 (provide 'init-basic)

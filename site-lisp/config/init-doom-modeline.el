@@ -179,11 +179,15 @@
 (setq doom-modeline-before-update-env-hook nil)
 (setq doom-modeline-after-update-env-hook nil)
 
-(display-time-mode 1)
-(display-battery-mode 1)
+(require 'fancy-battery)
+(add-hook 'after-init-hook #'fancy-battery-mode)
+(setq fancy-battery-show-percentage t)
+;; (display-battery-mode 1)
+
 (setq display-time-24hr-format t)
 (setq display-time-format "%H:%M")
 (setq display-time-default-load-average nil)
+(display-time-mode 1)
 
 
 ;; -------------------------

@@ -69,5 +69,7 @@ The original function deletes trailing whitespace of the current line."
 
 (require 'init-awesome-pair)
 
+(require 'init-python)
+
 ;; ------------
 (provide 'init-coding)
