@@ -1,10 +1,17 @@
 ;;; -*- lexical-binding: t -*-
 (require 'init-startup)
 (require 'init-basic)
-;; (require 'init-package)
-;; (require 'init-ui)
+(require 'init-package)
+(require 'init-ui)
+(require 'init-winum)
 ;; (require 'init-auto-save)
-;; (require 'init-which-key)
+(require 'init-which-key)
+(require 'init-crux)
+(require 'init-ivy)
+(require 'init-undo-tree)
+(require 'init-discover-my-major)
+(require 'init-ibuffer)
+;; (require 'init-recentf)
 ;; (require 'init-treemacs)
 ;; (require 'init-eaf)
 ;; (require 'init-meow)
@@ -12,6 +19,5 @@
 ;; (require 'init-org)
 ;; (require 'init-magit)
 ;; (require 'init-smartparens)
-
 ;; ------------
 (provide 'init)
