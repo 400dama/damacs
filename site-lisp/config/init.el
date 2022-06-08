@@ -5,7 +5,10 @@
 (require 'init-ui)
 (require 'init-winum)
 ;; (require 'init-auto-save)
+
 (require 'init-which-key)
+(require 'init-embark)
+
 (require 'init-crux)
 (require 'init-ivy)
 (require 'init-undo-tree)
@@ -13,7 +16,7 @@
 (require 'init-ibuffer)
 ;; (require 'init-recentf)
 ;; (require 'init-treemacs)
-;; (require 'init-eaf)
+(require 'init-eaf)
 ;; (require 'init-meow)
 ;; (require 'init-coding)
 ;; (require 'init-org)
