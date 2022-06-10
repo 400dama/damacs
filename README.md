@@ -9,6 +9,9 @@ git submodule foreach git checkout master
 
 sudo ln -s /home/parzival/damacs/site-lisp /home/parzival/emacs27/share/emacs/damacs
 sudo ln -s /home/parzival/damacs/site-start.el /home/parzival/emacs27/share/emacs/site-lisp/
+
+sudo ln -s /home/parzival/parzival/damacs/site-lisp /usr/share/emacs/damacs
+sudo ln -s /home/parzival/parzival/damacs/site-start.el /usr/share/emacs/site-lisp/
 ```
 
 M-x all-the-icons-install-fonts
