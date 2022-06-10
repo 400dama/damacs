@@ -19,8 +19,8 @@
   (dashboard-startup-banner 'logo)
   ;; To customize which widgets are displayed, you can use the following snippet
   (dashboard-items '((recents  . 5)
+		     (projects . 5)
                      (bookmarks . 3)
-		     ;; (projects . 5)
 		     ))
 
   (initial-buffer-choice (lambda () (get-buffer dashboard-buffer-name)))

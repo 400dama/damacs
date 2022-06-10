@@ -2,6 +2,7 @@
 (require 'init-startup)
 (require 'init-basic)
 (require 'init-package)
+(require 'init-projectile)
 (require 'init-ui)
 (require 'init-winum)
 ;; (require 'init-auto-save)
