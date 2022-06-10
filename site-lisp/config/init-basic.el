@@ -1,8 +1,8 @@
 ;;; -*- lexical-binding: t -*-
 
 ;; UserInfo
-(setq user-full-name "400dama")
-(setq user-mail-address "gotenks9002@gmail.com")
+(setq user-full-name "400dama"
+      user-mail-address "gotenks9002@gmail.com")
 
 ;; User Path
 (defvar damacs-root-dir (file-truename "~/damacs/site-lisp"))
@@ -87,10 +87,6 @@
   (interactive)
   (find-file "~/damacs/site-lisp/config/init.el"))
 (global-set-key (kbd "C-' e") #'edit-configs)
-
-;; Restart Emacs
-(global-set-key (kbd "C-' r") #'restart-emacs)
-
 
 ;; UTF8Coding
 (unless *sys/win32*

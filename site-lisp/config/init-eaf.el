@@ -15,7 +15,7 @@
   :demand
   :bind
   (("C-x j" . eaf-open-in-file-manager)
-   ("C-' c" . eaf-open-browesr)
+   ("C-' c" . eaf-open-browser)
    ;; ("M-z r" . eaf-open-rss-reader)
    ;; ("M-m r" . eaf-open-rss-reader)
    )
