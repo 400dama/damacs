@@ -2,9 +2,9 @@
 (require 'package)
 (setq package-user-dir damacs-module-dir)
 
-(setq package-archives '(("gnu"   . "https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/")
-			 ("melpa" . "https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/")
-			 ("org"   . "https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/org/")))
+(setq package-archives '(("gnu"   . "http://elpa.zilongshanren.com/gnu/")
+			 ("melpa" . "http://elpa.zilongshanren.com/melpa/")
+			 ("org"   . "http://elpa.zilongshanren.com/org/")))
 
 ;; ConfigurePackageManager
 (unless (bound-and-true-p package--initialized)
@@ -44,11 +44,21 @@
   (auto-package-update-hide-results t)
   :config
   (auto-package-update-maybe))
-;; -AutoPackageUpdate
+;; -AutoPackageUpdat
 
 ;; DimPac
 (use-package diminish)
 ;; -DimPac
+
+;; Fix Failed to verify signature queue-0.2.el.sig
+;; https://emacs.stackexchange.com/questions/233/how-to-proceed-on-package-el-signature-check-failure
+(setq package-check-signature nil)
+
+;; Restart Emacs
+(use-package restart-emacs
+  :bind
+  ("C-' r" . restart-emacs))
+
 
 ;; ------------
 (provide 'init-package)
