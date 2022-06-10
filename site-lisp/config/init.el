@@ -19,7 +19,7 @@
 ;; (require 'init-treemacs)
 (require 'init-eaf)
 ;; (require 'init-meow)
-;; (require 'init-coding)
+(require 'init-coding)
 ;; (require 'init-org)
 ;; (require 'init-magit)
 ;; (require 'init-smartparens)
