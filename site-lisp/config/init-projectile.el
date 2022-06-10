@@ -6,12 +6,9 @@
   ("C-c p" . projectile-command-map)
   :custom
   (projectile-completion-system 'ivy)
+  (projectile-project-search-path '("~/7DOC/" "~/parzival/"))
   :config
   (projectile-mode 1)
-  (when (and *sys/win32*
-             (executable-find "tr"))
-    (setq projectile-indexing-method 'alien))
-  (setq projectile-project-search-path '("~/7DOC"))
   )
 ;; -ProjPac
 
