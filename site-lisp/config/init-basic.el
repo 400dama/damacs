@@ -5,7 +5,7 @@
       user-mail-address "gotenks9002@gmail.com")
 
 ;; User Path
-(defvar damacs-root-dir (file-truename "~/damacs/site-lisp"))
+(defvar damacs-root-dir (file-truename "~/parzival/damacs/site-lisp"))
 (defvar damacs-config-dir (concat damacs-root-dir "/config"))
 (defvar damacs-extension-dir (concat damacs-root-dir "/extensions"))
 (defvar damacs-module-dir (concat damacs-root-dir "/modules"))
@@ -85,7 +85,9 @@
 (defun edit-configs ()
   "Opens the init.ef file."
   (interactive)
-  (find-file "~/damacs/site-lisp/config/init.el"))
+  ;; "~/damacs/site-lisp/config/init.el"
+  ;; damacs-config-dir
+  (find-file (expand-file-name "init.el" damacs-config-dir)))
 (global-set-key (kbd "C-' e") #'edit-configs)
 
 ;; UTF8Coding

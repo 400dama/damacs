@@ -11,7 +11,8 @@
   (when (and *sys/win32*
              (executable-find "tr"))
     (setq projectile-indexing-method 'alien))
-  (add-to-list 'projectile-globally-ignored-directories "node_modules"))
+  (setq projectile-project-search-path '("~/7DOC"))
+  )
 ;; -ProjPac
 
 ;; ------------
