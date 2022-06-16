@@ -1,5 +1,6 @@
 ;;; -*- lexical-binding: t -*-
 
+
 (use-package python-mode
   :ensure nil
   :after flycheck

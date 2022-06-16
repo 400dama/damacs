@@ -12,6 +12,9 @@
 (defvar damacs-tmp-dir (concat damacs-root-dir "/tmp"))
 
 ;; Const
+(defconst *sys/gui*
+  (or (display-graphic-p) (daemonp))
+  "Are we running on a GUI Emacs?")
 (defconst *sys/win32*
   (eq system-type 'windows-nt)
   "Are we running on a WinTel system?")
