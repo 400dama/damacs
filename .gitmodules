@@ -4,3 +4,6 @@
 [submodule "site-lisp/extensions/popweb"]
 	path = site-lisp/extensions/popweb
 	url = https://github.com/manateelazycat/popweb.git
+[submodule "site-lisp/extensions/lsp-bridge"]
+	path = site-lisp/extensions/lsp-bridge
+	url = https://github.com/manateelazycat/lsp-bridge.git
