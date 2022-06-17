@@ -2,18 +2,13 @@
 (require 'init-startup)
 (require 'init-basic)
 (require 'init-package)
-(require 'init-projectile)
-(require 'init-ui)
-(require 'init-winum)
-;; (require 'init-auto-save)
-(require 'init-which-key)
-(require 'init-coding)
 
 (require 'init-vertico)
 (require 'init-orderless)
 (require 'init-marginalia)
 (require 'init-embark)
 (require 'init-consult)
+(require 'init-corfu)
 
 ;; (require 'init-crux)
 ;; (require 'init-ivy)
@@ -21,6 +16,13 @@
 
 (require 'init-undo-tree)
 (require 'init-discover-my-major)
+
+(require 'init-projectile)
+(require 'init-ui)
+(require 'init-winum)
+;; (require 'init-auto-save)
+(require 'init-which-key)
+(require 'init-coding)
 
 ;; (require 'init-recentf)
 ;; (require 'init-treemacs)
