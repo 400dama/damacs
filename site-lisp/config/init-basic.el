@@ -91,7 +91,7 @@
   ;; "~/damacs/site-lisp/config/init.el"
   ;; damacs-config-dir
   (find-file (expand-file-name "init.el" damacs-config-dir)))
-(global-set-key (kbd "C-' e") #'edit-configs)
+(global-set-key (kbd "C-' i") #'edit-configs)
 
 ;; UTF8Coding
 (unless *sys/win32*

@@ -14,8 +14,12 @@
   (eaf-pdf-dark-mode "ignore")
   :demand
   :bind
-  (("C-x j" . eaf-open-in-file-manager)
-   ("C-' c" . eaf-open-browser)
+  (
+   :prefix-map eaf-map
+   :prefix "C-' e"
+   ("j" . eaf-open-in-file-manager)
+   ("c" . eaf-open-browser)
+   ("g" . eaf-open-git)
    ;; ("M-z r" . eaf-open-rss-reader)
    ;; ("M-m r" . eaf-open-rss-reader)
    )
