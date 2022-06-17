@@ -3,7 +3,7 @@
 ;; (require 'init-corfu)
 (require 'init-lsp-bridge)
 
-(require 'init-flycheck)
+;; (require 'init-flycheck)
 
 (require 'init-python)
 ;; ------------
