@@ -10,3 +10,6 @@
 [submodule "site-lisp/extensions/consult-projectile"]
 	path = site-lisp/extensions/consult-projectile
 	url = https://gitlab.com/OlMon/consult-projectile.git
+[submodule "site-lisp/extensions/awesome-pair"]
+	path = site-lisp/extensions/awesome-pair
+	url = https://github.com/manateelazycat/awesome-pair.git

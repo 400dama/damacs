@@ -11,6 +11,7 @@
   (setq package-enable-at-startup nil)          ; To prevent initializing twice
   (package-initialize))
 
+
 ;; set use-package-verbose to t for interpreted .emacs,
 ;; and to nil for byte-compiled .emacs.elc.
 (eval-and-compile
@@ -50,9 +51,9 @@
 (use-package diminish)
 ;; -DimPac
 
-;; Fix Failed to verify signature queue-0.2.el.sig
-;; https://emacs.stackexchange.com/questions/233/how-to-proceed-on-package-el-signature-check-failure
-(setq package-check-signature nil)
+;; ;; Fix Failed to verify signature queue-0.2.el.sig
+;; ;; https://emacs.stackexchange.com/questions/233/how-to-proceed-on-package-el-signature-check-failure
+;; (setq package-check-signature nil)
 
 ;; Restart Emacs
 (use-package restart-emacs

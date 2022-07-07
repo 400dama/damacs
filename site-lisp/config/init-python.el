@@ -16,5 +16,14 @@
   ;; (python-shell-interpreter "python3")
   )
 
+;; (use-package format-all
+;;   :hook ((python-mode) . format-all-mode)
+;;   )
+
+;; (use-package exec-path-from-shell
+;;   :config
+;;   (exec-path-from-shell-initialize)
+;;   )
+
 ;; ------------
 (provide 'init-python)

@@ -40,7 +40,7 @@
 
 ;; Ask before killing emacs
 (setq confirm-kill-emacs 'y-or-n-p)
-(fset 'yes-or-no-p 'y-or-n-p)
+;; (fset 'yes-or-no-p 'y-or-n-p)
 (setq use-dialog-box nil)
 
 ;; Turn Off Cursor Alarms
