@@ -1,0 +1,16 @@
+# Package directories
+elpa/
+quelpa/
+
+# Custom settings
+custom.el
+
+recentf
+
+# Auto-generated files
+auto-save-list/
+font/
+*~
+\#*\#
+.#*
+*.elc 
