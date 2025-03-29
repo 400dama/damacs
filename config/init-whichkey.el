@@ -21,7 +21,7 @@
   (which-key-posframe-border ((t (:background "#504945"))))
   :init
   (setq which-key-posframe-border-width 1
-	which-key-posframe-poshandler 'posframe-poshandler-window-center
+	which-key-posframe-poshandler 'posframe-poshandler-frame-center
 	which-key-posframe-parameters '((left-fringe . 5)
                                         (right-fringe . 5)))
 

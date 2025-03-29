@@ -24,11 +24,17 @@
   :ensure t
   :hook (after-init . doom-modeline-mode)
   :config
-  (setq doom-modeline-height 25
+  (setq doom-modeline-height 30
         doom-modeline-bar-width 3
         doom-modeline-icon t
         doom-modeline-major-mode-icon t
-        doom-modeline-minor-modes nil))
+        doom-modeline-minor-modes nil
+	doom-modeline-buffer-file-name-style 'truncate-upto-root
+	doom-modeline-major-mode-color-icon t
+	doom-modeline-lsp t
+	doom-modeline-lsp-icon t
+	doom-modeline-time t
+	doom-modeline-time-icon nil))
 
 ;; Install and configure all-the-icons
 (use-package all-the-icons
@@ -54,8 +60,10 @@
 
 ;; Display time
 (use-package time
-  :init (setq display-time-default-load-average t
-              display-time-format "%H:%M"))
+  :init
+  (setq display-time-default-load-average t
+        display-time-format "%H:%M")
+  (display-time-mode 1))
 
 ;; Provide the feature
 (provide 'init-ui)

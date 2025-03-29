@@ -21,6 +21,7 @@
 	dashboard-display-icons-p t
 	dashboard-set-file-icons t	
 	dashboard-set-heading-icons t
+	dashboard-set-footer t
 	dashboard-heading-icons '((recents   . "nf-oct-history")
                                   (bookmarks . "nf-oct-bookmark")
                                   (agenda    . "nf-oct-calendar")
